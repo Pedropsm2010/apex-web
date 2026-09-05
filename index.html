@@ -35,6 +35,7 @@
       <li><a href="#especialidades">Especialidades</a></li>
       <li><a href="#como-funciona">Como Funciona</a></li>
       <li><a href="#trabalhos">Trabalhos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
       <li><a href="#contato" class="nav-cta">Fale Conosco</a></li>
     </ul>
     <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
@@ -280,6 +281,53 @@
     </div>
   </section>
 
+  <section id="depoimentos" class="section depoimentos">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Depoimentos</span>
+      <h2 data-reveal>O que nossos clientes dizem</h2>
+      <p class="lead" data-reveal>Ainda estamos no começo — seja um dos primeiros a compartilhar sua experiência com a Apex Web.</p>
+
+      <div class="testimonials-grid" id="testimonials-grid" data-reveal data-delay="1">
+        <p class="testimonials-empty">Em breve, os depoimentos dos nossos clientes aparecem aqui.</p>
+      </div>
+
+      <div class="testimonial-form-card" data-reveal data-delay="2">
+        <h3>Deixe seu depoimento</h3>
+        <p class="testimonial-form-sub">É cliente da Apex Web? Conte como foi sua experiência — seu depoimento pode aparecer aqui no site.</p>
+
+        <form name="depoimentos" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="testimonial-form">
+          <input type="hidden" name="form-name" value="depoimentos">
+          <p class="bot-field-wrap"><label>Não preencha isto: <input name="bot-field"></label></p>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="testimonial-name">Seu nome</label>
+              <input type="text" id="testimonial-name" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-field">
+              <label for="testimonial-business">Sua empresa</label>
+              <input type="text" id="testimonial-business" name="empresa" placeholder="Nome do seu negócio" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="testimonial-text">Seu depoimento</label>
+            <textarea id="testimonial-text" name="depoimento" rows="4" placeholder="Conte como foi trabalhar com a Apex Web" required></textarea>
+          </div>
+
+          <p class="form-error" id="testimonial-error" hidden></p>
+
+          <button type="submit" class="btn btn-primary btn-block">Enviar depoimento</button>
+        </form>
+
+        <div class="testimonial-success" id="testimonial-success" hidden>
+          <div class="success-icon">✓</div>
+          <p>Obrigado pelo depoimento! Em breve ele pode aparecer aqui no site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contato" class="section cta">
     <div class="hero-bg" aria-hidden="true">
       <span class="blob blob-1"></span>
@@ -287,7 +335,6 @@
     <div class="container cta-content">
       <h2 data-reveal>Vamos conversar?</h2>
       <p data-reveal>Conte pra gente sobre o seu negócio e vamos pensar juntos na melhor forma de colocá-lo online.</p>
-      <span class="pricing-note" data-reveal>Projetos a partir de R$ 1.000, com orçamento personalizado conforme a complexidade</span>
       <div class="hero-actions" data-reveal>
         <a href="https://wa.me/5511944815707?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Apex%20Web%20e%20quero%20saber%20mais." target="_blank" rel="noopener" class="btn btn-primary">Chamar no WhatsApp</a>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ppsm2010@gmail.com" target="_blank" rel="noopener" class="btn btn-ghost">Enviar e-mail</a>

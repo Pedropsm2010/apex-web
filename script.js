@@ -90,6 +90,31 @@
     });
   }
 
+  // Testimonial form (Netlify Forms)
+  const testimonialForm = document.getElementById('testimonial-form');
+  if (testimonialForm) {
+    testimonialForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const errorEl = document.getElementById('testimonial-error');
+      errorEl.hidden = true;
+
+      const data = new FormData(testimonialForm);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      })
+        .then(() => {
+          testimonialForm.hidden = true;
+          document.getElementById('testimonial-success').hidden = false;
+        })
+        .catch(() => {
+          errorEl.textContent = 'Não foi possível enviar agora. Tente novamente ou chame no WhatsApp.';
+          errorEl.hidden = false;
+        });
+    });
+  }
+
   // Mouse parallax on floating hero cards
   const hero = document.querySelector('.hero');
   const parallaxEls = document.querySelectorAll('[data-parallax]');
