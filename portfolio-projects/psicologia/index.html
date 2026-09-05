@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ânima Psicologia — Um espaço para você se encontrar</title>
+<meta name="description" content="Atendimento psicológico individual, de casal e infantojuvenil, presencial e online. Agende sua primeira sessão.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<header class="site-header" id="site-header">
+  <div class="container nav">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 21C12 21 4 16 4 10C4 6.5 6.5 4 10 4C11.5 4 12 5 12 5C12 5 12.5 4 14 4C17.5 4 20 6.5 20 10C20 16 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>Ânima <strong>Psicologia</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" data-open-modal="login">Área do paciente</button>
+      <a href="#agendamento" class="btn btn-primary">Agendar consulta</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+    </div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" data-reveal>
+          <span class="pill">Psicologia clínica · CRP 06/123456</span>
+          <h1>Um espaço seguro para você <span class="text-accent">se encontrar.</span></h1>
+          <p>Atendimento psicológico individual, de casal e infantojuvenil, presencial em São Paulo ou online para todo o Brasil. O primeiro passo pode ser simples — vamos dar ele juntos.</p>
+          <div class="hero-actions">
+            <a href="#agendamento" class="btn btn-primary btn-lg">Agendar primeira sessão <span aria-hidden="true">→</span></a>
+            <a href="#sobre" class="btn btn-ghost btn-lg">Conhecer a abordagem</a>
+          </div>
+          <p class="disclaimer">
+            <span class="info-icon">ⓘ</span>
+            Em caso de emergência ou risco à vida, ligue 188 (CVV) ou procure o pronto-socorro mais próximo.
+          </p>
+        </div>
+
+        <div class="hero-visual" data-reveal data-delay="1">
+          <div class="hero-photo-card" data-parallax data-parallax-strength="14">
+            <div class="hero-photo">
+              <img src="assets/img/consultorio.jpg" alt="Sala de atendimento da Ânima Psicologia">
+            </div>
+            <div class="hero-photo-tag">
+              <strong>Nosso espaço de atendimento</strong>
+              <span>Ambiente reservado e acolhedor, em São Paulo</span>
+            </div>
+          </div>
+          <div class="float-card float-card-top">
+            <span class="float-dot"></span>
+            <div>
+              <strong>Próxima vaga livre</strong>
+              <span id="next-slot-value">Carregando…</span>
+            </div>
+          </div>
+          <div class="float-card float-card-bottom">
+            <span class="float-dot float-dot-alt"></span>
+            <div>
+              <strong>Atendimento</strong>
+              <span>Presencial e online</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats-row" data-reveal data-delay="2">
+        <div class="hero-stat"><span class="hero-stat-icon">✓</span> Sigilo profissional garantido</div>
+        <div class="hero-stat"><span class="hero-stat-icon">✓</span> Sessões presenciais e online</div>
+        <div class="hero-stat"><span class="hero-stat-icon">✓</span> Recibo para reembolso de convênio</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" data-reveal>
+          <div class="about-photo">
+            <img src="assets/img/sala-espera.jpg" alt="Sala de espera da Ânima Psicologia">
+          </div>
+        </div>
+        <div data-reveal data-delay="1">
+          <span class="eyebrow">Sobre</span>
+          <h2>Terapia é um processo, não uma fórmula pronta.</h2>
+          <p class="lead">Sou psicóloga clínica formada com abordagem cognitivo-comportamental, com experiência em ansiedade, autoestima, relacionamentos e transições de vida. Acredito em um espaço de escuta sem julgamentos, no seu tempo.</p>
+
+          <ul class="about-list">
+            <li><span class="check-icon">✓</span> CRP 06/123456 — registro ativo</li>
+            <li><span class="check-icon">✓</span> Especialização em Terapia Cognitivo-Comportamental (TCC)</li>
+            <li><span class="check-icon">✓</span> Mais de 8 anos de atuação clínica</li>
+            <li><span class="check-icon">✓</span> Atendimento presencial em São Paulo e online para todo o Brasil</li>
+          </ul>
+
+          <a href="#agendamento" class="btn btn-primary">Agendar uma conversa inicial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="especialidades" class="section section-alt">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Especialidades</span>
+      <h2 data-reveal>Áreas de atuação</h2>
+      <p class="lead" data-reveal>Cada processo terapêutico é único. Estas são as principais frentes de trabalho.</p>
+
+      <div class="cards-grid">
+        <div class="feature-card" data-reveal data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20C4 16 7.5 14 12 14C16.5 14 20 16 20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Terapia individual</h3>
+          <p>Ansiedade, autoestima, autoconhecimento e momentos de transição na vida adulta.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="1" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 20C2 17 4.5 15 8 15C9.2 15 10.2 15.3 11 15.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 20C22 17 19.5 15 16 15C14.8 15 13.8 15.3 13 15.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Terapia de casal</h3>
+          <p>Comunicação, conflitos recorrentes e reconstrução de vínculo entre parceiros.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="2" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M6 20C6 16.5 8.5 14.5 12 14.5C15.5 14.5 18 16.5 18 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 4.5C9 4.5 9.5 2 12 2C14.5 2 15 4.5 15 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Infantojuvenil</h3>
+          <p>Crianças e adolescentes em desenvolvimento emocional, escolar e social.</p>
+        </div>
+        <div class="feature-card" data-reveal data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12H7L9 6L14 18L16 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Ansiedade e estresse</h3>
+          <p>Manejo de sintomas ansiosos, sobrecarga e dificuldade de regulação emocional.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="1" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C12 21 4 16 4 10C4 6.5 6.5 4 10 4C11.5 4 12 5 12 5C12 5 12.5 4 14 4C17.5 4 20 6.5 20 10C20 16 12 21 12 21Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Autoestima e vínculos</h3>
+          <p>Fortalecimento da autoimagem, relação consigo e com o próprio corpo.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="2" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 18V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3 12H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M18 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Luto e transições</h3>
+          <p>Perdas, mudanças de fase da vida e processos de reconstrução pessoal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="section">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Como funciona</span>
+      <h2 data-reveal>Do primeiro contato à rotina de sessões.</h2>
+
+      <div class="steps-grid">
+        <div class="step" data-reveal>
+          <span class="step-number">01</span>
+          <h3>Agendamento</h3>
+          <p>Você escolhe o tipo de atendimento, a modalidade e o horário que fizer mais sentido.</p>
+        </div>
+        <div class="step" data-reveal data-delay="1">
+          <span class="step-number">02</span>
+          <h3>Conversa inicial</h3>
+          <p>Uma primeira sessão para entender sua demanda e ver se há sintonia para seguir juntas.</p>
+        </div>
+        <div class="step" data-reveal data-delay="2">
+          <span class="step-number">03</span>
+          <h3>Plano terapêutico</h3>
+          <p>Construímos, juntas, objetivos e frequência de acompanhamento adequados ao seu momento.</p>
+        </div>
+        <div class="step" data-reveal data-delay="3">
+          <span class="step-number">04</span>
+          <h3>Acompanhamento</h3>
+          <p>Sessões regulares, com espaço para ajustar o processo sempre que for necessário.</p>
+        </div>
+      </div>
+
+      <div class="insurance-row" data-reveal data-delay="1">
+        <span class="insurance-label">Convênios aceitos</span>
+        <div class="insurance-badges">
+          <span class="badge">Unimed</span>
+          <span class="badge">SulAmérica</span>
+          <span class="badge">Bradesco Saúde</span>
+          <span class="badge">Amil</span>
+          <span class="badge">Particular com recibo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="agendamento" class="section section-branded">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+    </div>
+    <div class="container">
+      <span class="eyebrow" data-reveal>Agendamento</span>
+      <h2 data-reveal>Vamos marcar sua primeira sessão?</h2>
+      <p class="lead" data-reveal>Escolha o tipo de atendimento, a modalidade, a data e o horário. Você recebe a confirmação na hora.</p>
+
+      <form id="booking-form" class="booking-card" data-reveal data-delay="1" novalidate>
+        <div class="booking-field">
+          <label>Tipo de atendimento</label>
+          <div class="option-grid" id="type-options">
+            <button type="button" class="option-chip" data-value="Terapia individual">Terapia individual</button>
+            <button type="button" class="option-chip" data-value="Terapia de casal">Terapia de casal</button>
+            <button type="button" class="option-chip" data-value="Infantojuvenil">Infantojuvenil</button>
+            <button type="button" class="option-chip" data-value="Conversa inicial">Conversa inicial (avaliação)</button>
+          </div>
+        </div>
+
+        <div class="booking-field">
+          <label>Modalidade</label>
+          <div class="option-row" id="modality-options">
+            <button type="button" class="option-chip small active" data-value="Online">Online</button>
+            <button type="button" class="option-chip small" data-value="Presencial">Presencial</button>
+          </div>
+        </div>
+
+        <div class="booking-field">
+          <label for="date-input">Data</label>
+          <input type="date" id="date-input" class="date-input">
+          <p class="booking-hint" id="date-hint" hidden></p>
+        </div>
+
+        <div class="booking-field">
+          <label>Horário</label>
+          <div class="option-row" id="time-options">
+            <p class="booking-hint">Escolha uma data para ver os horários disponíveis.</p>
+          </div>
+        </div>
+
+        <div class="booking-grid-2">
+          <div class="booking-field">
+            <label for="booking-name">Nome</label>
+            <input type="text" id="booking-name" placeholder="Seu nome" required>
+          </div>
+          <div class="booking-field">
+            <label for="booking-phone">WhatsApp</label>
+            <input type="tel" id="booking-phone" placeholder="(00) 00000-0000" required>
+          </div>
+        </div>
+
+        <div class="booking-field">
+          <label for="booking-note">O que te trouxe até aqui? <span class="optional-tag">(opcional)</span></label>
+          <textarea id="booking-note" rows="3" placeholder="Não precisa detalhar agora — isso pode ficar para a primeira sessão."></textarea>
+        </div>
+
+        <p class="booking-error" id="booking-error" hidden></p>
+
+        <button type="submit" class="btn btn-primary btn-block">Confirmar agendamento</button>
+        <p class="booking-disclaimer">Ambiente de demonstração — o agendamento fica salvo apenas neste navegador.</p>
+      </form>
+
+      <div class="my-bookings" data-reveal data-delay="2">
+        <h3>Meus agendamentos</h3>
+        <div class="bookings-list" id="bookings-list">
+          <p class="bookings-empty">Nenhum agendamento ainda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas" class="section section-alt">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Dúvidas frequentes</span>
+      <h2 data-reveal>Perguntas antes de começar.</h2>
+
+      <div class="faq-list" data-reveal data-delay="1">
+        <div class="faq-item">
+          <button class="faq-question">O que eu falo fica em sigilo?<span class="faq-icon">⌄</span></button>
+          <div class="faq-answer"><p>Sim. O sigilo profissional é um princípio ético da psicologia — o conteúdo das sessões não é compartilhado com terceiros, exceto em situações previstas por lei (como risco grave à vida).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Quanto tempo dura cada sessão?<span class="faq-icon">⌄</span></button>
+          <div class="faq-answer"><p>As sessões individuais e infantojuvenis duram 50 minutos. Sessões de casal têm 60 minutos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Atendimento online funciona tão bem quanto presencial?<span class="faq-icon">⌄</span></button>
+          <div class="faq-answer"><p>Para a maioria das demandas, sim. O formato online tem a mesma estrutura e sigilo da sessão presencial, com a flexibilidade de ser feito de onde você estiver.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Como funciona o reembolso pelo convênio?<span class="faq-icon">⌄</span></button>
+          <div class="faq-answer"><p>Para atendimentos particulares, é emitido recibo com os dados necessários para solicitar reembolso diretamente ao seu convênio, conforme as regras da sua operadora.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Posso remarcar ou cancelar uma sessão?<span class="faq-icon">⌄</span></button>
+          <div class="faq-answer"><p>Sim, pedimos apenas um aviso com pelo menos 24 horas de antecedência para reorganizar a agenda.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Quantas sessões são necessárias?<span class="faq-icon">⌄</span></button>
+          <div class="faq-answer"><p>Varia de pessoa para pessoa. Isso é conversado ao longo do processo, conforme os objetivos definidos juntas na conversa inicial.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-outer">
+    <div class="container">
+      <div class="cta-card" data-reveal>
+        <h2>Dê o primeiro passo, no seu tempo.</h2>
+        <p>Marcar uma conversa inicial não é um compromisso — é uma forma de conhecer o processo sem pressão.</p>
+        <div class="hero-actions">
+          <a href="#agendamento" class="btn btn-primary btn-lg">Agendar consulta</a>
+          <button class="btn btn-ghost btn-lg" data-open-modal="contact">Tirar uma dúvida antes</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21C12 21 4 16 4 10C4 6.5 6.5 4 10 4C11.5 4 12 5 12 5C12 5 12.5 4 14 4C17.5 4 20 6.5 20 10C20 16 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          <span>Ânima Psicologia</span>
+        </div>
+        <p>Atendimento psicológico individual, de casal e infantojuvenil, presencial em São Paulo e online para todo o Brasil.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#sobre">Sobre</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#duvidas">Dúvidas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="#" data-open-modal="contact">WhatsApp +55 (11) 98800-4471</a>
+        <a href="#" data-open-modal="contact">contato@animapsicologia.com.br</a>
+        <a href="#agendamento">Agendar consulta</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Dra. Beatriz Menezes — CRP 06/123456. Atendimento conforme o Código de Ética Profissional do Psicólogo.</p>
+      <p>Em caso de emergência ou risco à vida, ligue 188 (CVV — Centro de Valorização da Vida, gratuito e 24h) ou procure o pronto-socorro mais próximo.</p>
+      <p class="footer-copyright">© 2026 Ânima Psicologia. Projeto demonstrativo desenvolvido pela Apex Web.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- Login modal -->
+<div class="modal-overlay" id="modal-login">
+  <div class="modal">
+    <button class="modal-close" data-close-modal>&times;</button>
+    <div class="modal-view" data-view="form">
+      <h3>Área do paciente</h3>
+      <p class="modal-sub">Ambiente de demonstração — nenhum dado é armazenado em servidor.</p>
+      <form id="login-form">
+        <label>E-mail</label>
+        <input type="email" required placeholder="voce@email.com">
+        <label>Senha</label>
+        <input type="password" required placeholder="••••••••">
+        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      </form>
+    </div>
+    <div class="modal-view" data-view="success" hidden>
+      <div class="modal-icon">✓</div>
+      <h3>Login simulado</h3>
+      <p class="modal-sub">Em uma versão real, aqui ficariam seus agendamentos e recibos.</p>
+      <button class="btn btn-primary btn-block" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Contact modal -->
+<div class="modal-overlay" id="modal-contact">
+  <div class="modal">
+    <button class="modal-close" data-close-modal>&times;</button>
+    <div class="modal-view" data-view="form">
+      <h3>Tirar uma dúvida</h3>
+      <p class="modal-sub">Ambiente de demonstração — nenhum dado é armazenado em servidor.</p>
+      <form id="contact-form">
+        <label>Nome</label>
+        <input type="text" required placeholder="Seu nome">
+        <label>E-mail ou WhatsApp</label>
+        <input type="text" required placeholder="Como prefere ser contatada(o)">
+        <label>Mensagem</label>
+        <textarea required placeholder="Sua dúvida" rows="3"></textarea>
+        <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
+      </form>
+    </div>
+    <div class="modal-view" data-view="success" hidden>
+      <div class="modal-icon">✓</div>
+      <h3>Mensagem enviada!</h3>
+      <p class="modal-sub">Em um projeto real, a resposta chegaria pelo canal informado. Isto é uma demonstração.</p>
+      <button class="btn btn-primary btn-block" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

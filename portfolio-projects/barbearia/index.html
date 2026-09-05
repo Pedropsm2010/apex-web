@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbearia Nobre — Estilo que fala por você</title>
+<meta name="description" content="Barbearia Nobre: cortes, barba e cuidado masculino com agendamento simples e atendimento de qualidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="6" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M20 5L8.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M8.5 9L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Barbearia <strong>Nobre</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#horarios">Horários</a></li>
+    </ul>
+    <a href="#agendar" class="btn btn-primary">Agendar horário</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-decor hero-decor-left" aria-hidden="true">
+      <div class="barber-pole">
+        <span class="pole-cap pole-cap-top"></span>
+        <span class="pole-stripes"></span>
+        <span class="pole-cap pole-cap-bottom"></span>
+      </div>
+    </div>
+
+    <div class="hero-decor hero-decor-right" aria-hidden="true">
+      <div class="float-card" id="next-slot-card">
+        <span class="float-dot"></span>
+        <div>
+          <strong>Próxima vaga livre</strong>
+          <span id="next-slot-value">Carregando…</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container hero-content">
+      <span class="eyebrow">Barbearia clássica</span>
+      <h1>Estilo que fala <span>por você.</span></h1>
+      <p>Corte, barba e cuidado masculino com atenção aos detalhes — em um ambiente pensado para o seu momento de cuidar de si.</p>
+      <div class="hero-actions">
+        <a href="#agendar" class="btn btn-primary">Agendar horário</a>
+        <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section servicos">
+    <div class="container">
+      <span class="eyebrow">Serviços</span>
+      <h2>Cuidado completo, do jeito certo</h2>
+
+      <div class="cards-grid">
+        <div class="service-card">
+          <h3>Corte clássico</h3>
+          <p>Tesoura e máquina, com acabamento na navalha.</p>
+          <span class="price">R$ 45</span>
+        </div>
+        <div class="service-card">
+          <h3>Barba</h3>
+          <p>Toalha quente, navalha e hidratação.</p>
+          <span class="price">R$ 35</span>
+        </div>
+        <div class="service-card featured">
+          <span class="badge">Mais pedido</span>
+          <h3>Combo corte + barba</h3>
+          <p>O pacote completo, com prioridade no agendamento.</p>
+          <span class="price">R$ 70</span>
+        </div>
+        <div class="service-card">
+          <h3>Sobrancelha</h3>
+          <p>Alinhamento na navalha ou pinça.</p>
+          <span class="price">R$ 20</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="horarios" class="section horarios">
+    <div class="container horarios-grid">
+      <div>
+        <span class="eyebrow">Horários</span>
+        <h2>Quando estamos de portas abertas</h2>
+        <ul class="hours-list">
+          <li><span>Terça a sexta</span><span>9h — 19h</span></li>
+          <li><span>Sábado</span><span>9h — 17h</span></li>
+          <li><span>Domingo e segunda</span><span>Fechado</span></li>
+        </ul>
+      </div>
+      <div class="horarios-note">
+        <p>Atendimento por ordem de agendamento. Chegue com 10 minutos de antecedência para não perder o horário reservado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="agendar" class="section cta">
+    <div class="container">
+      <div class="cta-content">
+        <span class="eyebrow">Agendamento</span>
+        <h2>Pronto para o próximo corte?</h2>
+        <p>Escolha o serviço, a data e o horário. Confirma na hora, sem precisar ligar.</p>
+      </div>
+
+      <form id="booking-form" class="booking-card" novalidate>
+        <div class="booking-field">
+          <label>Serviço</label>
+          <div class="option-grid" id="service-options">
+            <button type="button" class="option-chip" data-value="Corte clássico" data-price="R$ 45">Corte clássico<span>R$ 45</span></button>
+            <button type="button" class="option-chip" data-value="Barba" data-price="R$ 35">Barba<span>R$ 35</span></button>
+            <button type="button" class="option-chip" data-value="Combo corte + barba" data-price="R$ 70">Combo corte + barba<span>R$ 70</span></button>
+            <button type="button" class="option-chip" data-value="Sobrancelha" data-price="R$ 20">Sobrancelha<span>R$ 20</span></button>
+          </div>
+        </div>
+
+        <div class="booking-field">
+          <label for="date-input">Data</label>
+          <input type="date" id="date-input" class="date-input">
+          <p class="booking-hint" id="date-hint" hidden></p>
+        </div>
+
+        <div class="booking-field">
+          <label>Horário</label>
+          <div class="option-row" id="time-options">
+            <p class="booking-hint">Escolha uma data para ver os horários disponíveis.</p>
+          </div>
+        </div>
+
+        <div class="booking-grid-2">
+          <div class="booking-field">
+            <label for="booking-name">Nome</label>
+            <input type="text" id="booking-name" placeholder="Seu nome" required>
+          </div>
+          <div class="booking-field">
+            <label for="booking-phone">WhatsApp</label>
+            <input type="tel" id="booking-phone" placeholder="(00) 00000-0000" required>
+          </div>
+        </div>
+
+        <div class="booking-field">
+          <label>Lembrete</label>
+          <div class="option-row" id="notify-options">
+            <button type="button" class="option-chip small active" data-value="whatsapp">WhatsApp</button>
+            <button type="button" class="option-chip small" data-value="email">E-mail</button>
+            <button type="button" class="option-chip small" data-value="nenhum">Não quero</button>
+          </div>
+        </div>
+
+        <p class="booking-error" id="booking-error" hidden></p>
+
+        <button type="submit" class="btn btn-primary btn-block">Confirmar agendamento</button>
+        <p class="booking-disclaimer">Ambiente de demonstração — o agendamento fica salvo apenas neste navegador.</p>
+      </form>
+
+      <div class="my-bookings" id="my-bookings">
+        <h3>Meus agendamentos</h3>
+        <div class="bookings-list" id="bookings-list">
+          <p class="bookings-empty">Nenhum agendamento ainda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Barbearia Nobre. Projeto demonstrativo desenvolvido pela Apex Web.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

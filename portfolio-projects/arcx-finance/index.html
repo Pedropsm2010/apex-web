@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcx Finance — Negocie criptomoedas de forma direta</title>
+<meta name="description" content="Compre e venda criptomoedas com PIX, com cotação transparente e simulador em tempo real.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<header class="site-header" id="site-header">
+  <div class="container nav">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 16L11 4L14 9.5L11 15L17 15L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Arcx</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-accent">Início</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#simulador" data-sim-mode="comprar" class="nav-accent">Comprar</a></li>
+      <li><a href="#simulador" data-sim-mode="vender" class="nav-accent">Vender</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" data-open-modal="login">Entrar</button>
+      <button class="btn btn-primary" data-open-modal="signup">Criar conta</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+    </div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" data-reveal>
+          <span class="pill">Compra e venda de criptomoedas com PIX</span>
+          <h1>Compre e venda cripto <span class="text-accent text-shine">com clareza total.</span></h1>
+          <p>Pague com PIX e receba USDT, ou envie sua cripto e receba em reais. Cotação e taxas apresentadas antes da confirmação, com acompanhamento de cada etapa.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" data-open-modal="signup">Criar minha conta <span aria-hidden="true">→</span></button>
+            <a href="#como-funciona" class="btn btn-ghost btn-lg">Entender como funciona</a>
+          </div>
+          <p class="disclaimer">Operações com criptomoedas envolvem riscos. Consulte as condições antes de continuar.</p>
+        </div>
+
+        <div class="hero-visual" data-reveal data-delay="1">
+          <svg class="hero-graphic" viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradA" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1fe28a"/>
+                <stop offset="100%" stop-color="#00c86f"/>
+              </linearGradient>
+            </defs>
+            <rect x="40" y="30" width="60" height="150" rx="14" transform="skewY(-30)" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+            <rect x="150" y="60" width="60" height="150" rx="14" transform="skewY(-30)" fill="url(#gradA)"/>
+            <line x1="70" y1="150" x2="250" y2="150" stroke="#00c86f" stroke-opacity="0.35" stroke-width="1.5"/>
+            <circle class="graphic-dot dot-1" cx="70" cy="150" r="5" fill="#f5f5f5"/>
+            <circle class="graphic-dot dot-2" cx="185" cy="150" r="6" fill="#1fe28a"/>
+            <circle class="graphic-ambient" cx="55" cy="90" r="3" fill="#1fe28a" fill-opacity="0.6"/>
+            <circle class="graphic-ambient" cx="270" cy="60" r="3" fill="#1fe28a" fill-opacity="0.6"/>
+            <circle class="graphic-ambient" cx="90" cy="200" r="3" fill="#1fe28a" fill-opacity="0.4"/>
+            <circle class="graphic-ambient" cx="280" cy="200" r="3" fill="#1fe28a" fill-opacity="0.4"/>
+          </svg>
+
+          <div class="flow-tags">
+            <span class="tag">PIX → USDT</span>
+            <span class="tag">USDT → PIX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats-row" data-reveal data-delay="2">
+        <div class="hero-stat">
+          <span class="hero-stat-icon">◎</span>
+          <span>Cotação transparente</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-icon">◎</span>
+          <span>Acompanhamento da operação</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-icon">◎</span>
+          <span>Suporte especializado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="section">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Como funciona</span>
+      <h2 data-reveal>Três etapas, sem ruído.</h2>
+      <p class="lead" data-reveal>Um caminho curto entre a sua intenção e o acompanhamento completo da operação.</p>
+
+      <div class="steps-grid">
+        <div class="step" data-reveal>
+          <span class="step-number">01</span>
+          <h3>Faça sua solicitação</h3>
+          <p>Informe o ativo digital e o valor desejado para receber as condições da operação.</p>
+        </div>
+        <div class="step" data-reveal data-delay="1">
+          <span class="step-number">02</span>
+          <h3>Acompanhe a confirmação</h3>
+          <p>Visualize as informações, o status do pagamento e todas as etapas em um único lugar.</p>
+        </div>
+        <div class="step" data-reveal data-delay="2">
+          <span class="step-number">03</span>
+          <h3>Conclusão da operação</h3>
+          <p>Após as confirmações necessárias, acompanhe a finalização diretamente pelo painel.</p>
+        </div>
+      </div>
+
+      <p class="section-note">O tempo de cada etapa depende das confirmações necessárias e das verificações aplicáveis. Não há prazo fixo garantido.</p>
+    </div>
+  </section>
+
+  <section id="simulador" class="section section-alt">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Simulador</span>
+      <h2 data-reveal>Veja as condições antes de decidir.</h2>
+      <p class="lead" data-reveal>Escolha o ativo, informe o valor e visualize a estimativa com taxas apresentadas separadamente. Nesta versão, os dados são demonstrativos.</p>
+
+      <ul class="sim-highlights" data-reveal data-delay="1">
+        <li><span class="check-icon">✓</span> Taxas de serviço e de rede sempre separadas</li>
+        <li><span class="check-icon">✓</span> Cotação com contagem regressiva visível</li>
+        <li><span class="check-icon">✓</span> Nenhum dado sensível é solicitado na simulação</li>
+      </ul>
+
+      <div class="simulator" data-reveal data-delay="2">
+        <div class="simulator-head">
+          <div class="simulator-tabs">
+            <button class="sim-tab active" data-mode="comprar">Comprar</button>
+            <button class="sim-tab" data-mode="vender">Vender</button>
+          </div>
+          <span class="sim-demo-badge">Simulação demonstrativa</span>
+        </div>
+
+        <div class="simulator-body">
+          <div class="sim-row-grid">
+            <div class="sim-field">
+              <label>Criptomoeda</label>
+              <select id="sim-asset">
+                <option value="BTC">BTC · Bitcoin</option>
+                <option value="ETH">ETH · Ethereum</option>
+                <option value="USDT">USDT · Tether</option>
+              </select>
+            </div>
+
+            <div class="sim-field">
+              <label id="sim-amount-label">Valor em reais (PIX)</label>
+              <div class="sim-input">
+                <span id="sim-prefix">R$</span>
+                <input type="text" id="sim-amount" inputmode="decimal" placeholder="1.000,00">
+              </div>
+              <p class="sim-note">Valores apenas para demonstração.</p>
+            </div>
+          </div>
+
+          <div class="sim-result">
+            <div class="sim-result-row">
+              <span>Cotação de referência</span>
+              <strong id="sim-quote">—</strong>
+            </div>
+            <div class="sim-result-row">
+              <span id="sim-qty-label">Quantidade estimada</span>
+              <strong id="sim-qty">—</strong>
+            </div>
+            <div class="sim-result-row">
+              <span>Taxa de serviço</span>
+              <strong id="sim-fee-service">—</strong>
+            </div>
+            <div class="sim-result-row">
+              <span>Custo de rede</span>
+              <strong id="sim-fee-network">—</strong>
+            </div>
+            <div class="sim-result-row sim-total">
+              <span id="sim-total-label">Total a pagar via PIX</span>
+              <strong id="sim-total">—</strong>
+            </div>
+          </div>
+
+          <div class="sim-footer">
+            <span class="sim-updated">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12a8 8 0 0 1 14.5-4.5M20 12a8 8 0 0 1-14.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M19 4v4h-4M5 20v-4h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Atualizado às <span id="sim-time">—</span>
+            </span>
+            <span class="sim-countdown-wrap">Nova cotação em <span id="sim-countdown" class="sim-countdown-badge">30s</span></span>
+          </div>
+
+          <button class="btn btn-primary btn-block" data-open-modal="confirm">Continuar <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <p class="sim-disclaimer" data-reveal data-delay="3">
+        <span class="info-icon">ⓘ</span>
+        Cotações e taxas exibidas são fictícias e servem apenas para demonstrar a interface. Nenhuma operação real é executada nesta etapa.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Diferenciais</span>
+      <h2 data-reveal>Clareza em cada detalhe.</h2>
+
+      <div class="cards-grid">
+        <div class="feature-card" data-reveal data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="2.5" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="18" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 8.5V12C6 14.2091 7.79086 16 10 16H14C16.2091 16 18 14.2091 18 12" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="9" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3>Processo direto</h3>
+          <p>Menos etapas entre a sua solicitação e o acompanhamento da operação.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="1" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4h14a1 1 0 0 1 1 1v14l-2-1.2-2 1.2-2-1.2-2 1.2-2-1.2-2 1.2-2-1.2L4 19V5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 8V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14.5 9.5C14.5 8.67 13.38 8 12 8C10.62 8 9.5 8.67 9.5 9.5C9.5 10.33 10.62 11 12 11C13.38 11 14.5 11.67 14.5 12.5C14.5 13.33 13.38 14 12 14C10.62 14 9.5 13.33 9.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Transparência de taxas</h3>
+          <p>Valores e custos apresentados de forma separada antes da confirmação.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="2" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12H7L9 6L14 18L16 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Acompanhamento em tempo real</h3>
+          <p>Cada mudança de status fica registrada e visível no painel.</p>
+        </div>
+        <div class="feature-card" data-reveal data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 13V11C4 6.58 7.58 3 12 3C16.42 3 20 6.58 20 11V13" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="13" width="5" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="17" y="13" width="5" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Suporte especializado</h3>
+          <p>Canais oficiais para tirar dúvidas durante o processo.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="1" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V11" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Segurança da conta</h3>
+          <p>Autenticação em duas etapas, sessões ativas e alertas de novo acesso.</p>
+        </div>
+        <div class="feature-card" data-reveal data-delay="2" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M4 12H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M4 18H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M15 6L16.5 7.5L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12L16.5 13.5L20 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 18L16.5 19.5L20 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Histórico organizado</h3>
+          <p>Protocolo, datas, valores e etapas de todas as operações.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="seguranca" class="section section-branded">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+    </div>
+    <div class="container">
+      <span class="eyebrow" data-reveal>Segurança</span>
+      <h2 data-reveal>Camadas que protegem sua operação.</h2>
+      <p class="lead" data-reveal>Segurança é um processo contínuo, aplicado à plataforma e reforçado pelas boas práticas de cada usuário.</p>
+
+      <div class="cards-grid">
+        <div class="feature-card feature-card-branded" data-reveal data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12C13.1 12 14 12.9 14 14V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10 12.5V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 10.5V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 13V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6 9V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 5C15 5 17.5 7 18 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 5C9 5 6.5 7 6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9.5 4C10.3 3.4 11.1 3 12 3C12.9 3 13.7 3.4 14.5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Verificação de identidade</h3>
+          <p>Processos de verificação conforme as políticas internas e a legislação aplicável.</p>
+        </div>
+        <div class="feature-card feature-card-branded" data-reveal data-delay="1" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="15" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M11.5 11.5L20 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 6L19 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Autenticação em duas etapas</h3>
+          <p>Camada adicional de proteção no acesso à sua conta.</p>
+        </div>
+        <div class="feature-card feature-card-branded" data-reveal data-delay="2" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M4 12H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M4 18H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M15 6L16.5 7.5L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12L16.5 13.5L20 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 18L16.5 19.5L20 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Registro das etapas</h3>
+          <p>Cada mudança de status da operação fica registrada com data e hora.</p>
+        </div>
+        <div class="feature-card feature-card-branded" data-reveal data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12C2 12 5.5 5 12 5C18.5 5 22 12 22 12C22 12 18.5 19 12 19C5.5 19 2 12 2 12Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Monitoramento de atividades</h3>
+          <p>Acompanhamento de comportamentos suspeitos na plataforma.</p>
+        </div>
+        <div class="feature-card feature-card-branded" data-reveal data-delay="1" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L20 6V11C20 16 16.5 20 12 21C7.5 20 4 16 4 11V6L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Proteção de dados</h3>
+          <p>Controles de acesso e tratamento de dados descritos na política de privacidade.</p>
+        </div>
+        <div class="feature-card feature-card-branded" data-reveal data-delay="2" data-spotlight>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4C9 4 7 6.5 7 10V13L5 17H19L17 13V10C17 6.5 15 4 12 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 20C10.5 20.8 11.2 21 12 21C12.8 21 13.5 20.8 14 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Canais oficiais</h3>
+          <p>Comunicação apenas pelos canais indicados no site e no painel.</p>
+        </div>
+      </div>
+      <p class="security-note" data-reveal>Segurança também depende do usuário. Nunca compartilhe senhas, códigos de autenticação ou acesso à sua carteira.</p>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Depoimentos</span>
+      <h2 data-reveal>Quem opera com a gente.</h2>
+      <p class="lead" data-reveal>Relatos de clientes sobre clareza nas taxas, acompanhamento das etapas e segurança da conta.</p>
+
+      <div class="testimonial-wrap" data-reveal data-delay="1">
+        <div class="testimonial-page active" data-page="0">
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="testimonial-stars">★★★★★</div>
+              <span class="quote-icon">”</span>
+            </div>
+            <p>"Já tinha usado outras plataformas e sempre ficava perdida com as taxas. Aqui vi tudo antes de confirmar e o valor caiu exatamente como estava na tela."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-avatar">MA</span>
+              <div>
+                <strong>Mariana Alves</strong>
+                <span>Designer • São Paulo, SP</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="testimonial-stars">★★★★★</div>
+              <span class="quote-icon">”</span>
+            </div>
+            <p>"O que mais me prendeu foi o acompanhamento etapa por etapa. Sei em que ponto está a operação sem precisar ficar cobrando ninguém no suporte."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-avatar">RN</span>
+              <div>
+                <strong>Rafael Nogueira</strong>
+                <span>Trader autônomo • Curitiba, PR</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="testimonial-stars">★★★★★</div>
+              <span class="quote-icon">”</span>
+            </div>
+            <p>"A verificação de identidade e a autenticação em duas etapas me deram confiança logo no começo. Dá para perceber que segurança não é enfeite aqui."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-avatar">JP</span>
+              <div>
+                <strong>Juliana Prado</strong>
+                <span>Contadora • Belo Horizonte, MG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-page" data-page="1" hidden>
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="testimonial-stars">★★★★★</div>
+              <span class="quote-icon">”</span>
+            </div>
+            <p>"Fiz meu primeiro USDT com PIX em poucos minutos. Interface limpa, sem promessa exagerada e com histórico organizado de cada operação."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-avatar">DM</span>
+              <div>
+                <strong>Diego Martins</strong>
+                <span>Desenvolvedor • Florianópolis, SC</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="testimonial-stars">★★★★★</div>
+              <span class="quote-icon">”</span>
+            </div>
+            <p>"Tive uma dúvida no meio da operação e o suporte respondeu pelo canal oficial explicando cada etapa. Atendimento humano faz diferença."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-avatar">CF</span>
+              <div>
+                <strong>Camila Ferreira</strong>
+                <span>Empreendedora • Recife, PE</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="testimonial-stars">★★★★★</div>
+              <span class="quote-icon">”</span>
+            </div>
+            <p>"Uso para converter parte do caixa em USDT todo mês. A cotação com contagem regressiva evita surpresa e o extrato fica fácil de conferir."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-avatar">LB</span>
+              <div>
+                <strong>Lucas Bittencourt</strong>
+                <span>Analista financeiro • Porto Alegre, RS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-controls">
+          <button type="button" class="carousel-btn" id="testimonial-prev" aria-label="Depoimentos anteriores">←</button>
+          <button type="button" class="carousel-btn" id="testimonial-next" aria-label="Próximos depoimentos">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas" class="section section-alt">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Dúvidas frequentes</span>
+      <h2 data-reveal>Respostas diretas.</h2>
+      <p class="lead" data-reveal>Se algo não estiver aqui, fale com o suporte pelos canais oficiais.</p>
+
+      <div class="faq-list" data-reveal data-delay="1">
+        <div class="faq-item">
+          <button class="faq-question">
+            Como a Arcx Finance funciona?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>Você escolhe o ativo e o valor, confirma a cotação apresentada e acompanha cada etapa da operação até a conclusão, direto pelo painel.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quais criptomoedas são atendidas?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>Nesta versão de demonstração: Bitcoin (BTC), Ethereum (ETH) e Tether (USDT).</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Como as taxas são calculadas?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>Uma taxa de serviço fixa e um custo de rede, sempre exibidos separadamente antes da confirmação — sem valores escondidos.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quanto tempo uma operação pode levar?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>O tempo varia conforme as confirmações necessárias na rede e as verificações internas. Não há prazo fixo garantido, mas a maioria das operações é concluída em poucos minutos.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Como acompanho minha solicitação?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>Todo o progresso fica visível no painel, com o status atualizado a cada etapa — da confirmação do pagamento até a liberação final.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Quais verificações são necessárias?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>Verificação de identidade no cadastro e, dependendo do valor da operação, confirmações adicionais conforme as políticas internas e a legislação aplicável.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            O que fazer se ocorrer algum problema?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>Entre em contato pelos canais oficiais informados no painel. O histórico da operação já fica disponível para agilizar o atendimento.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Como meus dados são protegidos?
+            <span class="faq-icon">⌄</span>
+          </button>
+          <div class="faq-answer">
+            <p>O acesso à conta conta com autenticação em duas etapas, e o tratamento dos dados segue os controles descritos na política de privacidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-outer">
+    <div class="container">
+      <div class="cta-card" data-reveal>
+        <div class="hero-bg" aria-hidden="true">
+          <span class="blob blob-1"></span>
+        </div>
+        <div class="cta-content">
+          <h2>Comece com clareza em cada etapa.</h2>
+          <p>Crie sua conta para conhecer a plataforma e visualizar as condições disponíveis.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" data-open-modal="signup">Criar conta</button>
+            <button class="btn btn-ghost btn-lg" data-open-modal="support">Falar com o suporte</button>
+          </div>
+          <p class="disclaimer">
+            <span class="info-icon">ⓘ</span>
+            Plataforma em versão demonstrativa: nenhuma operação financeira real é executada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="hero-bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+  </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 16L11 4L14 9.5L11 15L17 15L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Arcx</span>
+        </div>
+        <p>A Arcx Finance conecta diretamente participantes interessados na compra e venda de criptomoedas, reduzindo etapas e acompanhando cada operação com clareza.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Plataforma</h4>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#seguranca">Segurança</a>
+        <a href="#duvidas">Central de ajuda</a>
+        <a href="#">Sobre nós</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Termos de uso</a>
+        <a href="#">Política de privacidade</a>
+        <a href="#">Política de riscos</a>
+        <a href="#">Prevenção a fraudes</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <a href="#" data-open-modal="support">WhatsApp +55 (11) 91788-5205</a>
+        <a href="#" data-open-modal="support">Spinolap2p@gmail.com</a>
+        <a href="#" data-open-modal="support">Instagram @spinolap2p</a>
+        <a href="#" data-open-modal="support">Falar com o suporte</a>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <p>ARCX Soluções Financeiras e Serviços Digitais Ltda — CNPJ 66.487.777/0001-30 — São Paulo, SP, Brasil</p>
+      <p>Operações com criptomoedas envolvem riscos, incluindo variação de preço e riscos operacionais. A Arcx Finance não é banco, instituição financeira, corretora autorizada ou custodiante e não garante resultados. Consulte as condições antes de continuar.</p>
+      <p>Serviço destinado apenas ao público legalmente elegível, maior de 18 anos e residente no Brasil.</p>
+      <p class="footer-copyright">© 2026 Arcx Finance. Todos os direitos reservados. Projeto demonstrativo desenvolvido pela Apex Web.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- Signup modal -->
+<div class="modal-overlay" id="modal-signup">
+  <div class="modal">
+    <button class="modal-close" data-close-modal>&times;</button>
+    <div class="modal-view" data-view="form">
+      <h3>Criar conta demonstrativa</h3>
+      <p class="modal-sub">Ambiente de demonstração — nenhum dado é armazenado em servidor.</p>
+      <form id="signup-form">
+        <label>Nome</label>
+        <input type="text" required placeholder="Seu nome">
+        <label>E-mail</label>
+        <input type="email" required placeholder="voce@email.com">
+        <button type="submit" class="btn btn-primary btn-block">Criar conta</button>
+      </form>
+    </div>
+    <div class="modal-view" data-view="success" hidden>
+      <div class="modal-icon">✓</div>
+      <h3>Conta criada!</h3>
+      <p class="modal-sub">Essa é uma conta de demonstração. Em um projeto real, o próximo passo seria a verificação de identidade.</p>
+      <button class="btn btn-primary btn-block" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Login modal -->
+<div class="modal-overlay" id="modal-login">
+  <div class="modal">
+    <button class="modal-close" data-close-modal>&times;</button>
+    <div class="modal-view" data-view="form">
+      <h3>Entrar</h3>
+      <p class="modal-sub">Ambiente de demonstração — nenhum dado é armazenado em servidor.</p>
+      <form id="login-form">
+        <label>E-mail</label>
+        <input type="email" required placeholder="voce@email.com">
+        <label>Senha</label>
+        <input type="password" required placeholder="••••••••">
+        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      </form>
+    </div>
+    <div class="modal-view" data-view="success" hidden>
+      <div class="modal-icon">✓</div>
+      <h3>Login simulado</h3>
+      <p class="modal-sub">Em uma conta real, você seria direcionado ao painel da sua conta.</p>
+      <button class="btn btn-primary btn-block" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm order modal -->
+<div class="modal-overlay" id="modal-confirm">
+  <div class="modal">
+    <button class="modal-close" data-close-modal>&times;</button>
+    <div class="modal-view" data-view="form">
+      <h3>Confirmar operação</h3>
+      <p class="modal-sub">Revise os dados antes de confirmar. Simulação demonstrativa.</p>
+      <div class="confirm-summary" id="confirm-summary"></div>
+      <button class="btn btn-primary btn-block" id="confirm-submit">Confirmar operação</button>
+    </div>
+    <div class="modal-view" data-view="success" hidden>
+      <div class="modal-icon">✓</div>
+      <h3>Operação confirmada</h3>
+      <p class="modal-sub">Protocolo <strong id="confirm-protocol">—</strong>. Nenhuma operação real foi executada — isto é uma demonstração.</p>
+      <button class="btn btn-primary btn-block" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Support modal -->
+<div class="modal-overlay" id="modal-support">
+  <div class="modal">
+    <button class="modal-close" data-close-modal>&times;</button>
+    <div class="modal-view" data-view="form">
+      <h3>Falar com o suporte</h3>
+      <p class="modal-sub">Ambiente de demonstração — nenhum dado é armazenado em servidor.</p>
+      <form id="support-form">
+        <label>Nome</label>
+        <input type="text" required placeholder="Seu nome">
+        <label>E-mail</label>
+        <input type="email" required placeholder="voce@email.com">
+        <label>Mensagem</label>
+        <textarea required placeholder="Como podemos ajudar?" rows="3"></textarea>
+        <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
+      </form>
+    </div>
+    <div class="modal-view" data-view="success" hidden>
+      <div class="modal-icon">✓</div>
+      <h3>Mensagem enviada!</h3>
+      <p class="modal-sub">Em um projeto real, nosso time responderia pelo e-mail informado. Isto é uma demonstração.</p>
+      <button class="btn btn-primary btn-block" data-close-modal>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
