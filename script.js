@@ -104,7 +104,8 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       })
-        .then(() => {
+        .then((response) => {
+          if (!response.ok) throw new Error(`Envio falhou (${response.status})`);
           testimonialForm.hidden = true;
           document.getElementById('testimonial-success').hidden = false;
         })
