@@ -984,6 +984,12 @@ h2 {
   margin-bottom: 8px;
 }
 
+.optional-tag {
+  color: var(--text-muted);
+  font-weight: 400;
+  opacity: 0.75;
+}
+
 .form-field input,
 .form-field textarea {
   width: 100%;
